@@ -1,6 +1,6 @@
 <?php 
   
-  include('koneksi.php');
+  include('App/db/koneksi.php');
   
   $id = $_GET['id'];
   
@@ -31,9 +31,8 @@
               EDIT GURU 
             </div>
             <div class="card-body">
-              <form action="update_guru.php" method="POST">
+              <form action="App/update_guru.php" method="POST">
                 
-
                 <div class="form-group">
                   <label>NUPTK</label>
                   <input type="teks" name="nuptk" value="<?= $row['nuptk'] ?>" placeholder="Masukkan NISN Siswa" class="form-control" disabled>
@@ -42,13 +41,12 @@
 
                 <div class="form-group">
                   <label>Nama Lengkap</label>
-                  <input type="text" name="nama" value="<?=  $row['nama'] ?>" placeholder="Masukkan Nama Siswa" class="form-control">
+                  <input type="text" name="nama" value="<?=  $row['nama'] ?>" placeholder="Masukkan Nama Siswa" class="form-control" required>
                 </div>
-
 
                 <div class="form-group">
                   <label>Golongan</label>
-                  <select name="golongan" id="golongan">
+                  <select name="golongan" id="golongan" class="form-control" required >
                      <option value="III/a">III/a</option>
                      <option value="III/b">III/b</option>
                      <option value="III/c">III/c</option>

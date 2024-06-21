@@ -17,7 +17,7 @@
               TAMBAH GURU 
             </div>
             <div class="card-body">
-              <form action="simpan_guru.php" method="POST">
+              <form action="App/simpan_guru.php" method="POST">
                 
                 <div class="form-group">
                   <label>NUPTK</label>
@@ -31,7 +31,7 @@
 
                 <div class="form-group">
                   <label>Golongan</label>
-                  <select name="golongan" id="golongan" required>
+                  <select name="golongan" id="golongan" class="form-control" required>
                      <option value="III/a">III/a</option>
                      <option value="III/b">III/b</option>
                      <option value="III/c">III/c</option>

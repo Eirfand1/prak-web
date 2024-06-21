@@ -33,7 +33,7 @@
                 </thead>
                 <tbody>
                   <?php 
-                      include('koneksi.php');
+                      include('App/db/koneksi.php');
                       $i = 1;
                       $query = mysqli_query($connection,"SELECT * FROM tbl_guru");
                       while($row = mysqli_fetch_array($query)):
@@ -47,7 +47,7 @@
                       <td><?=  $row['jenis_kelamin'] == 'L' ? "Laki-laki" : "Perempuan" ; ?></td>
                       <td class="text-center">
                         <a href="edit_guru.php?id=<?= $row['idguru']?>" class="btn btn-sm btn-primary">EDIT</a>
-                        <a href="hapus_guru.php?id=<?= $row['idguru']?>" class="btn btn-sm btn-danger">HAPUS</a>
+                        <a href="App/hapus_guru.php?id=<?= $row['idguru']?>" class="btn btn-sm btn-danger">HAPUS</a>
                       </td> 
                   </tr>
 
